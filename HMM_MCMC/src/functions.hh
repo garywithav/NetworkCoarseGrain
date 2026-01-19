@@ -1,3 +1,22 @@
+// Utility random functions for Windows/MSVC compatibility
+#include <random>
+inline int randint(int a, int b) {
+    static std::mt19937 gen(std::random_device{}());
+    std::uniform_int_distribution<> dist(a, b);
+    return dist(gen);
+}
+inline int randint_except(int a, int b, int except) {
+    int r;
+    do {
+        r = randint(a, b);
+    } while (r == except);
+    return r;
+}
+inline double frand(double a, double b) {
+    static std::mt19937 gen(std::random_device{}());
+    std::uniform_real_distribution<> dist(a, b);
+    return dist(gen);
+}
 using namespace std;
 using namespace Eigen;
 
@@ -7,29 +26,28 @@ normal_distribution<double> norm_dist_h(0,1);
 uniform_real_distribution<double> uniform_h(0.0, 1.0);
 
 
-bool mkpath( std::string path )
-{
+// Windows-compatible mkpath using _mkdir from <direct.h>
+#include <direct.h>
+bool mkpath(std::string path) {
     bool bSuccess = false;
-    int nRC = ::mkdir( path.c_str(), 0775 );
-    if( nRC == -1 )
-    {
-        switch( errno )
-        {
-            case ENOENT:
-                //parent didn't exist, try to create it
-                if( mkpath( path.substr(0, path.find_last_of('/')) ) )
-                    //Now, try to create again.
-                    bSuccess = 0 == ::mkdir( path.c_str(), 0775 );
-                else
-                    bSuccess = false;
-                break;
-            case EEXIST:
-                //Done!
-                bSuccess = true;
-                break;
-            default:
+    int nRC = _mkdir(path.c_str());
+    if (nRC == -1) {
+        switch (errno) {
+        case ENOENT:
+            // parent didn't exist, try to create it
+            if (mkpath(path.substr(0, path.find_last_of("/\\"))))
+                // Now, try to create again.
+                bSuccess = 0 == _mkdir(path.c_str());
+            else
                 bSuccess = false;
-                break;
+            break;
+        case EEXIST:
+            // Done!
+            bSuccess = true;
+            break;
+        default:
+            bSuccess = false;
+            break;
         }
     }
     else
@@ -101,28 +119,7 @@ void matinv(Eigen::MatrixXd& mat, Eigen::MatrixXd& matinv){
 };
 
 
-int randint(int Min, int Max) {
-    return std::rand() % (Max + 1 - Min) + Min;
-}
 
-
-int randint_except(int Min, int Max, int except) {
-
-    int res;
-    int cond=0;
-    while(cond==0){
-    res =  std::rand() % (Max + 1 - Min) + Min;
-    if(res!=except){cond=1;}
-    }
-    return res;
-}
-
-
-double frand(double fmin, double fmax)
-{
-   double f = (double(rand())+0.5) / (double(RAND_MAX) +1.0);
-   return fmin +  f* (fmax - fmin);
-}
 
 
 void normalize_A(int n, Eigen::MatrixXd& A){
@@ -175,35 +172,34 @@ void calc_Pi(int n, Eigen::MatrixXd& A,  vector<double> & Pi, string mode){
     // std::cout << s.eigenvectors() << std::endl;
 
     int First_ev;
-        for(int i = 0; i <n; ++i){
-            if(i==0){
-                First_ev=i;
-            }
-            else{
+    for(int i = 0; i <n; ++i){
+        if(i==0){
+            First_ev=i;
+        }
+        else{
             if(abs(1-s.eigenvalues()[i].real())<abs(1-s.eigenvalues()[First_ev].real()))First_ev=i;
-            }
         }
-        
-        if (abs(1-s.eigenvalues()[First_ev].real())>0.005 or abs(s.eigenvalues()[First_ev].imag())>0.005){
-            cout<<s.eigenvalues()[First_ev]<<endl;
-            cout<<"ERROR: Matrix is not normalized properly"<<endl;
-            abort();
-            }
-        
-        if(mode=="print_y"){
+    }
+    // Replace 'or' with '||' for C++
+    if (abs(1-s.eigenvalues()[First_ev].real())>0.005 || abs(s.eigenvalues()[First_ev].imag())>0.005){
+        cout<<s.eigenvalues()[First_ev]<<endl;
+        cout<<"ERROR: Matrix is not normalized properly"<<endl;
+        abort();
+    }
+    if(mode=="print_y"){
         cout<<"First eigenvalue (Re,Im) = "<<s.eigenvalues()[First_ev]<<std::endl;
+    }
+    double sum=0;
+    for(int i=0; i<n; i++){
+        Pi[i] =s.eigenvectors().col(First_ev)[i].real();
+        sum+=Pi[i];
+    }
+    for(int i=0; i<n; i++){
+        Pi[i]*=1.0/sum;
+        if(mode=="print_y"){
+            cout<<"Pi@"<<i<<" = "<<Pi[i]<<endl;
         }
-        double sum=0;
-        for(int i=0; i<n; i++){
-            Pi[i] =s.eigenvectors().col(First_ev)[i].real();
-            sum+=Pi[i];
-        }
-        for(int i=0; i<n; i++){
-                Pi[i]*=1.0/sum;
-                if(mode=="print_y"){
-                cout<<"Pi@"<<i<<" = "<<Pi[i]<<endl;
-                }
-        }
+    }
 }
 
 

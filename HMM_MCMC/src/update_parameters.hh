@@ -1,3 +1,5 @@
+// Ensure utility functions are available
+#include "functions.hh"
 using namespace std;
 using namespace Eigen;
 
@@ -27,7 +29,7 @@ double DB_reversible_update(int n, vector<double>& Pi_old,vector<double>& Pi_new
     A_new(J,I) -= Pi_old[I]/Pi_old[J]*Delta;
     A_new(J,J) += Pi_old[I]/Pi_old[J]*Delta; 
     
-    if (A_new(I,J)<0 or A_new(I,I)<0 or A_new(J,I)<0 or A_new(J,J)<0){
+    if (A_new(I,J)<0 || A_new(I,I)<0 || A_new(J,I)<0 || A_new(J,J)<0){
         cout<<A_old;
         cout<<"I,J "<<I<<" "<<J<<endl;
         cout<<"Delta"<<Delta<<" in ["<<Delta_low<<","<<Delta_high<<"]"<<endl;

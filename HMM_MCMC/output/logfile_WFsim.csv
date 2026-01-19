@@ -1,23 +1,23 @@
 T=10, Nlin=20, Ndeme=3
 noisemode=2
 nonDB
-2500,  acc (%)= 8, lnLH=1903.44
-5000,  acc (%)= 7, lnLH=1904.72
-7500,  acc (%)= 7, lnLH=1905.44
-10000,  acc (%)= 7, lnLH=1906.89
-12500,  acc (%)= 7, lnLH=1904.73
-15000,  acc (%)= 7, lnLH=1905.15
-17500,  acc (%)= 8, lnLH=1906.89
-20000,  acc (%)= 7, lnLH=1897.47
-22500,  acc (%)= 6, lnLH=1908.19
-25000,  acc (%)= 7, lnLH=1906
-27500,  acc (%)= 7, lnLH=1902.48
-30000,  acc (%)= 6, lnLH=1908.15
-32500,  acc (%)= 7, lnLH=1910.79
-35000,  acc (%)= 7, lnLH=1908.71
-37500,  acc (%)= 6, lnLH=1908.55
-40000,  acc (%)= 6, lnLH=1904.17
-42500,  acc (%)= 6, lnLH=1900.81
-45000,  acc (%)= 7, lnLH=1905.26
-47500,  acc (%)= 6, lnLH=1908.05
-Run time: 18
+5,  acc (%)= 0, lnLH=-nan(ind)
+10,  acc (%)= 0, lnLH=-nan(ind)
+15,  acc (%)= 0, lnLH=-nan(ind)
+20,  acc (%)= 0, lnLH=-nan(ind)
+25,  acc (%)= 0, lnLH=-nan(ind)
+30,  acc (%)= 0, lnLH=-nan(ind)
+35,  acc (%)= 0, lnLH=-nan(ind)
+40,  acc (%)= 0, lnLH=-nan(ind)
+45,  acc (%)= 0, lnLH=-nan(ind)
+50,  acc (%)= 0, lnLH=-nan(ind)
+55,  acc (%)= 0, lnLH=-nan(ind)
+60,  acc (%)= 0, lnLH=-nan(ind)
+65,  acc (%)= 0, lnLH=-nan(ind)
+70,  acc (%)= 0, lnLH=-nan(ind)
+75,  acc (%)= 0, lnLH=-nan(ind)
+80,  acc (%)= 0, lnLH=-nan(ind)
+85,  acc (%)= 0, lnLH=-nan(ind)
+90,  acc (%)= 0, lnLH=-nan(ind)
+95,  acc (%)= 0, lnLH=-nan(ind)
+Run time: 8

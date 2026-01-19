@@ -1,0 +1,151 @@
+,utla,deme
+0,Stockton-on-Tees,NE-0
+1,Newcastle upon Tyne,NE-1
+2,County Durham,NE-0
+3,Middlesbrough,NE-0
+4,Gateshead,NE-0
+5,Northumberland,NE-1
+6,North Tyneside,NE-1
+7,South Tyneside,NE-1
+8,Redcar and Cleveland,NE-1
+9,Darlington,NE-0
+10,Sunderland,NE-0
+11,Hartlepool,NE-1
+12,Liverpool,NW-2
+13,Cheshire East,NW-2
+14,Rochdale,NW-1
+15,Wigan,NW-0
+16,Cumbria,NW-3
+17,Bolton,NW-0
+18,Cheshire West and Chester,NW-2
+19,Wirral,NW-2
+20,Sefton,NW-2
+21,Trafford,NW-1
+22,Blackburn with Darwen,NW-3
+23,Oldham,NW-1
+24,Tameside,NW-1
+25,Salford,NW-1
+26,Stockport,NW-1
+27,Bury,NW-1
+28,Warrington,NW-2
+29,Manchester,NW-1
+30,Halton,NW-2
+31,Lancashire,NW-0
+32,Blackpool,NW-3
+33,Knowsley,NW-0
+34,St. Helens,NW-2
+35,Bradford,YH-1
+36,"Kingston upon Hull, City of",YH-1
+37,Calderdale,YH-2
+38,East Riding of Yorkshire,YH-1
+39,Rotherham,YH-2
+40,Barnsley,YH-2
+41,Doncaster,YH-0
+42,Leeds,YH-0
+43,North Yorkshire,YH-1
+44,North Lincolnshire,YH-0
+45,Sheffield,YH-2
+46,North East Lincolnshire,YH-1
+47,Wakefield,YH-0
+48,Kirklees,YH-2
+49,York,YH-0
+50,Leicester,EM-1
+51,Nottingham,EM-0
+52,Derby,EM-0
+53,Nottinghamshire,EM-0
+54,Derbyshire,EM-1
+55,Leicestershire,EM-1
+56,Rutland,EM-0
+57,Lincolnshire,EM-2
+58,Northamptonshire,EM-2
+59,Shropshire,WM-2
+60,Solihull,WM-2
+61,Wolverhampton,WM-1
+62,Staffordshire,WM-1
+63,Birmingham,WM-0
+64,Stoke-on-Trent,WM-1
+65,Coventry,WM-0
+66,Sandwell,WM-0
+67,Walsall,WM-1
+68,"Herefordshire, County of",WM-2
+69,Telford and Wrekin,WM-2
+70,Warwickshire,WM-0
+71,Worcestershire,WM-2
+72,Dudley,WM-2
+73,Bedford,EE-1
+74,Thurrock,EE-0
+75,Luton,EE-1
+76,Southend-on-Sea,EE-0
+77,Peterborough,EE-2
+78,Essex,EE-0
+79,Hertfordshire,EE-1
+80,Norfolk,EE-2
+81,Central Bedfordshire,EE-1
+82,Cambridgeshire,EE-2
+83,Suffolk,EE-2
+84,Enfield,LDN-4
+85,Bexley,LDN-1
+86,Tower Hamlets,LDN-2
+87,Merton,LDN-3
+88,Barking and Dagenham,LDN-1
+89,Sutton,LDN-1
+90,Lewisham,LDN-1
+91,Richmond upon Thames,LDN-3
+92,Kingston upon Thames,LDN-1
+93,Haringey,LDN-4
+94,Hammersmith and Fulham,LDN-0
+95,Westminster,LDN-0
+96,Islington,LDN-4
+97,Hackney,LDN-2
+98,Kensington and Chelsea,LDN-0
+99,Camden,LDN-0
+100,Waltham Forest,LDN-4
+101,Barnet,LDN-0
+102,City of London,LDN-2
+103,Croydon,LDN-1
+104,Bromley,LDN-1
+105,Southwark,LDN-2
+106,Hounslow,LDN-3
+107,Harrow,LDN-0
+108,Hillingdon,LDN-3
+109,Greenwich,LDN-2
+110,Redbridge,LDN-4
+111,Wandsworth,LDN-3
+112,Brent,LDN-0
+113,Ealing,LDN-3
+114,Havering,LDN-4
+115,Lambeth,LDN-3
+116,Newham,LDN-2
+117,Surrey,SE-1
+118,West Berkshire,SE-3
+119,Hampshire,SE-1
+120,Windsor and Maidenhead,SE-3
+121,Bracknell Forest,SE-3
+122,Reading,SE-3
+123,West Sussex,SE-2
+124,Isle of Wight,SE-2
+125,Medway,SE-0
+126,Kent,SE-0
+127,Wokingham,SE-1
+128,Milton Keynes,SE-3
+129,Portsmouth,SE-2
+130,Southampton,SE-1
+131,Slough,SE-3
+132,Buckinghamshire,SE-3
+133,Brighton and Hove,SE-2
+134,East Sussex,SE-2
+135,Oxfordshire,SE-3
+136,"Bournemouth, Christchurch and Poole",SW-1
+137,Dorset,SW-1
+138,Swindon,SW-1
+139,Plymouth,SW-2
+140,South Gloucestershire,SW-0
+141,"Bristol, City of",SW-0
+142,North Somerset,SW-0
+143,Torbay,SW-2
+144,Cornwall,SW-2
+145,Devon,SW-0
+146,Gloucestershire,SW-1
+147,Bath and North East Somerset,SW-1
+148,Wiltshire,SW-1
+149,Somerset,SW-0
